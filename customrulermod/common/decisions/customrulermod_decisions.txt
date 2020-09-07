@@ -1,0 +1,19 @@
+﻿customrulermod_custom_ruler_decision = {
+    major = yes
+    is_shown = {
+        is_ai = no
+        NOT = { exists = global_var:customrulermod_GLOBAL_customRulerStarted }
+    }
+    is_valid = {
+        is_ai = no
+    }
+    effect = {
+        set_global_variable = {
+            name = customrulermod_GLOBAL_customRulerStarted
+            value = yes
+        }
+        trigger_event = { id = customrulermod.1 }
+    }
+
+    ai_check_interval = 0
+}

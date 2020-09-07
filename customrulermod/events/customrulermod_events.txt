@@ -1,0 +1,937 @@
+﻿#CustomRulerMod.1 Generate Character
+#CustomRulerMod.2 (Dynasty Only) Inherit or Disinherit
+#CustomRulerMod.10 (Adults Only) Education
+#CustomRulerMod.20 Genetic Traits
+#CustomRulerMod.30 Random Traits
+#CustomRulerMod.40 Attributes
+
+namespace = customrulermod
+
+customrulermod.1 = {
+    type = character_event
+    title = customrulermod.1.t
+    desc = customrulermod.1.desc
+    theme = realm
+
+    option = { #Male 0 New Dynasty
+        name = customrulermod.1.a
+        create_character = {
+            age = 0
+            gender = male
+            faith = root.faith
+            culture = root.culture
+            dynasty = generate
+            location = root.location
+            random_traits = no
+            diplomacy = 0
+            stewardship = 0
+            martial = 0
+            learning = 0
+            intrigue = 0
+            save_scope_as = customrulermod_customCharacterScope
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = { #Female 0 New Dynasty
+        name = customrulermod.1.b
+        create_character = {
+            age = 0
+            gender = female
+            faith = root.faith
+            culture = root.culture
+            dynasty = generate
+            location = root.location
+            random_traits = no
+            diplomacy = 0
+            stewardship = 0
+            martial = 0
+            learning = 0
+            intrigue = 0
+            save_scope_as = customrulermod_customCharacterScope
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = { #Male 16 New Dynasty
+        name = customrulermod.1.c
+        create_character = {
+            age = 16
+            gender = male
+            faith = root.faith
+            culture = root.culture
+            dynasty = generate
+            location = root.location
+            random_traits = no
+            diplomacy = 0
+            stewardship = 0
+            martial = 0
+            learning = 0
+            intrigue = 0
+            save_scope_as = customrulermod_customCharacterScope
+        }
+        trigger_event = { id = customrulermod.10 }
+    }
+    option = { #Female 16 New Dynasty
+        name = customrulermod.1.d
+        create_character = {
+            age = 16
+            gender = female
+            faith = root.faith
+            culture = root.culture
+            dynasty = generate
+            location = root.location
+            random_traits = no
+            diplomacy = 0
+            stewardship = 0
+            martial = 0
+            learning = 0
+            intrigue = 0
+            save_scope_as = customrulermod_customCharacterScope
+        }
+        trigger_event = { id = customrulermod.10 }
+    }
+    option = { #Male 0 Same Dynasty
+        name = customrulermod.1.e
+        if = {
+            limit = { is_male = yes }
+            create_character = {
+                age = 0
+                father = root
+                gender = male
+                faith = root.faith
+                culture = root.culture
+                dynasty = root.dynasty
+                location = root.location
+                random_traits = no
+                diplomacy = 0
+                stewardship = 0
+                martial = 0
+                learning = 0
+                intrigue = 0
+                save_scope_as = customrulermod_customCharacterScope
+            }
+        }
+        if = {
+            limit = { is_male = no }
+            create_character = {
+                age = 0
+                mother = root
+                gender = male
+                faith = root.faith
+                culture = root.culture
+                dynasty = root.dynasty
+                location = root.location
+                random_traits = no
+                diplomacy = 0
+                stewardship = 0
+                martial = 0
+                learning = 0
+                intrigue = 0
+                save_scope_as = customrulermod_customCharacterScope
+            }
+        }
+        trigger_event = { id = customrulermod.2 }
+    }
+    option = { #Female 0 Same Dynasty
+        name = customrulermod.1.f
+        if = {
+            limit = { is_male = yes }
+            create_character = {
+                age = 0
+                father = root
+                gender = female
+                faith = root.faith
+                culture = root.culture
+                dynasty = root.dynasty
+                location = root.location
+                random_traits = no
+                diplomacy = 0
+                stewardship = 0
+                martial = 0
+                learning = 0
+                intrigue = 0
+                save_scope_as = customrulermod_customCharacterScope
+            }
+        }
+        if = {
+            limit = { is_male = no }
+            create_character = {
+                age = 0
+                mother = root
+                gender = female
+                faith = root.faith
+                culture = root.culture
+                dynasty = root.dynasty
+                location = root.location
+                random_traits = no
+                diplomacy = 0
+                stewardship = 0
+                martial = 0
+                learning = 0
+                intrigue = 0
+                save_scope_as = customrulermod_customCharacterScope
+            }
+        }
+        trigger_event = { id = customrulermod.2 }
+    }
+    option = { #Male 16 Same Dynasty
+        name = customrulermod.1.g
+        if = {
+            limit = { is_male = yes }
+            create_character = {
+                age = 16
+                father = root
+                gender = male
+                faith = root.faith
+                culture = root.culture
+                dynasty = root.dynasty
+                location = root.location
+                random_traits = no
+                diplomacy = 0
+                stewardship = 0
+                martial = 0
+                learning = 0
+                intrigue = 0
+                save_scope_as = customrulermod_customCharacterScope
+            }
+        }
+        if = {
+            limit = { is_male = no }
+            create_character = {
+                age = 16
+                mother = root
+                gender = male
+                faith = root.faith
+                culture = root.culture
+                dynasty = root.dynasty
+                location = root.location
+                random_traits = no
+                diplomacy = 0
+                stewardship = 0
+                martial = 0
+                learning = 0
+                intrigue = 0
+                save_scope_as = customrulermod_customCharacterScope
+            }
+        }
+        trigger_event = { id = customrulermod.2 }
+    }
+    option = { #Female 16 Same Dynasty
+        name = customrulermod.1.h
+        if = {
+            limit = { is_male = yes }
+            create_character = {
+                age = 16
+                father = root
+                gender = female
+                faith = root.faith
+                culture = root.culture
+                dynasty = root.dynasty
+                location = root.location
+                random_traits = no
+                diplomacy = 0
+                stewardship = 0
+                martial = 0
+                learning = 0
+                intrigue = 0
+                save_scope_as = customrulermod_customCharacterScope
+            }
+        }
+        if = {
+            limit = { is_male = no }
+            create_character = {
+                age = 16
+                mother = root
+                gender = female
+                faith = root.faith
+                culture = root.culture
+                dynasty = root.dynasty
+                location = root.location
+                random_traits = no
+                diplomacy = 0
+                stewardship = 0
+                martial = 0
+                learning = 0
+                intrigue = 0
+                save_scope_as = customrulermod_customCharacterScope
+            }
+        }
+        trigger_event = { id = customrulermod.2 }
+    }
+}
+
+customrulermod.2 = {
+    type = character_event
+    title = customrulermod.2.t
+    desc = customrulermod.2.desc
+    theme = realm
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.2.a
+    }
+    option = {
+        name = customrulermod.2.b
+        scope:customrulermod_customCharacterScope = {
+            add_trait = disinherited
+        }
+    }
+    after = {
+        if = {
+            limit = {
+                scope:customrulermod_customCharacterScope = {
+                    age < 14
+                }
+            }
+            trigger_event = { id = customrulermod.20 }
+        }
+        if = {
+            limit = {
+                scope:customrulermod_customCharacterScope = {
+                    age > 15
+                }
+            }
+            trigger_event = { id = customrulermod.10 }
+        }
+    }
+}
+
+customrulermod.10 = {
+    type = character_event
+    title = customrulermod.education.t
+    desc = customrulermod.education.desc
+    theme = education
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.10.a
+        trigger_event = { id = customrulermod.11 }
+    }
+    option = {
+        name = customrulermod.10.b
+        trigger_event = { id = customrulermod.12 }
+    }
+    option = {
+        name = customrulermod.10.c
+        trigger_event = { id = customrulermod.13 }
+    }
+    option = {
+        name = customrulermod.10.d
+        trigger_event = { id = customrulermod.14 }
+    }
+    option = {
+        name = customrulermod.10.e
+        trigger_event = { id = customrulermod.15 }
+    }
+    option = {
+        name = customrulermod.continue
+        trigger_event = { id = customrulermod.20 }
+    }
+}
+customrulermod.11 = {
+    type = character_event
+    title = customrulermod.education.t
+    desc = customrulermod.education.desc
+    theme = education
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.11.a
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_diplomacy_1
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.11.b
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_diplomacy_2
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.11.c
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_diplomacy_3
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.11.d
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_diplomacy_4
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.prevpage
+        hidden_effect = {
+            scope:customrulermod_customCharacterScope = {
+                customrulermod_remove_education_traits = {}
+            }
+        }
+        trigger_event = { id = customrulermod.10 }
+    }
+}
+customrulermod.12 = {
+    type = character_event
+    title = customrulermod.education.t
+    desc = customrulermod.education.desc
+    theme = education
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.12.a
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_stewardship_1
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.12.b
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_stewardship_2
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.12.c
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_stewardship_3
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.12.d
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_stewardship_4
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.prevpage
+        hidden_effect = {
+            scope:customrulermod_customCharacterScope = {
+                customrulermod_remove_education_traits = {}
+            }
+        }
+        trigger_event = { id = customrulermod.10 }
+    }
+}
+customrulermod.13 = {
+    type = character_event
+    title = customrulermod.education.t
+    desc = customrulermod.education.desc
+    theme = education
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.13.a
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_martial_1
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.13.b
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_martial_2
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.13.c
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_martial_3
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.13.d
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_martial_4
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.prevpage
+        hidden_effect = {
+            scope:customrulermod_customCharacterScope = {
+                customrulermod_remove_education_traits = {}
+            }
+        }
+        trigger_event = { id = customrulermod.10 }
+    }
+}
+customrulermod.14 = {
+    type = character_event
+    title = customrulermod.education.t
+    desc = customrulermod.education.desc
+    theme = education
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.14.a
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_learning_1
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.14.b
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_learning_2
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.14.c
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_learning_3
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.14.d
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_learning_4
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.prevpage
+        hidden_effect = {
+            scope:customrulermod_customCharacterScope = {
+                customrulermod_remove_education_traits = {}
+            }
+        }
+        trigger_event = { id = customrulermod.10 }
+    }
+}
+customrulermod.15 = {
+    type = character_event
+    title = customrulermod.education.t
+    desc = customrulermod.education.desc
+    theme = education
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.15.a
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_intrigue_1
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.15.b
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_intrigue_2
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.15.c
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_intrigue_3
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.15.d
+        scope:customrulermod_customCharacterScope = {
+            add_trait = education_intrigue_4
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.prevpage
+        hidden_effect = {
+            scope:customrulermod_customCharacterScope = {
+                customrulermod_remove_education_traits = {}
+            }
+        }
+        trigger_event = { id = customrulermod.10 }
+    }
+}
+
+customrulermod.20 = {
+    type = character_event
+    title = customrulermod.20.t
+    desc = customrulermod.20.desc
+    theme = realm
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.20.a
+        trigger_event = { id = customrulermod.21 } #Beauty
+    }
+    option = {
+        name = customrulermod.20.b
+        trigger_event = { id = customrulermod.22 } #Intellect
+    }
+    option = {
+        name = customrulermod.20.c
+        trigger_event = { id = customrulermod.23 } #Physique
+    }
+#    option = {
+#        name = customrulermod.20.d
+#        trigger_event = { id = customrulermod.24 } #Other genetic traits (TBD)
+#    }
+    option = {
+        name = customrulermod.20.e
+        hidden_effect = {
+            scope:customrulermod_customCharacterScope = {
+                customrulermod_remove_good_genetic_traits = {}
+            }
+        }
+        trigger_event = { id = customrulermod.20 }
+    }
+    option = {
+        name = customrulermod.continue
+        trigger_event = { id = customrulermod.30 }
+    }
+}
+
+#beauty_good_1
+#intellect_good_1
+#physique_good_1
+
+customrulermod.21 = {
+    type = character_event
+    title = customrulermod.21.t
+    desc = customrulermod.21.desc
+    theme = realm
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.21.a
+        scope:customrulermod_customCharacterScope = {
+            hidden_effect = {
+                remove_trait = beauty_good_1
+                remove_trait = beauty_good_2
+                remove_trait = beauty_good_3
+            }
+            add_trait = beauty_good_1
+        }
+    }
+    option = {
+        name = customrulermod.21.b
+        scope:customrulermod_customCharacterScope = {
+            hidden_effect = {
+                remove_trait = beauty_good_1
+                remove_trait = beauty_good_2
+                remove_trait = beauty_good_3
+            }
+            add_trait = beauty_good_2
+        }
+    }
+    option = {
+        name = customrulermod.21.c
+        scope:customrulermod_customCharacterScope = {
+            hidden_effect = {
+                remove_trait = beauty_good_1
+                remove_trait = beauty_good_2
+                remove_trait = beauty_good_3
+            }
+            add_trait = beauty_good_3
+        }
+    }
+    option = {
+        name = customrulermod.prevpage
+    }
+    after = {
+        trigger_event = { id = customrulermod.20 }
+    }
+}
+
+customrulermod.22 = {
+    type = character_event
+    title = customrulermod.22.t
+    desc = customrulermod.22.desc
+    theme = realm
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.22.a
+        scope:customrulermod_customCharacterScope = {
+            hidden_effect = {
+                remove_trait = intellect_good_1
+                remove_trait = intellect_good_2
+                remove_trait = intellect_good_3
+            }
+            add_trait = intellect_good_1
+        }
+    }
+    option = {
+        name = customrulermod.22.b
+        scope:customrulermod_customCharacterScope = {
+            hidden_effect = {
+                remove_trait = intellect_good_1
+                remove_trait = intellect_good_2
+                remove_trait = intellect_good_3
+            }
+            add_trait = intellect_good_2
+        }
+    }
+    option = {
+        name = customrulermod.22.c
+        scope:customrulermod_customCharacterScope = {
+            hidden_effect = {
+                remove_trait = intellect_good_1
+                remove_trait = intellect_good_2
+                remove_trait = intellect_good_3
+            }
+            add_trait = intellect_good_3
+        }
+    }
+    option = {
+        name = customrulermod.prevpage
+    }
+    after = {
+        trigger_event = { id = customrulermod.20 }
+    }
+}
+
+customrulermod.23 = {
+    type = character_event
+    title = customrulermod.23.t
+    desc = customrulermod.23.desc
+    theme = realm
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.23.a
+        scope:customrulermod_customCharacterScope = {
+            hidden_effect = {
+                remove_trait = physique_good_1
+                remove_trait = physique_good_2
+                remove_trait = physique_good_3
+            }
+            add_trait = physique_good_1
+        }
+    }
+    option = {
+        name = customrulermod.23.b
+        scope:customrulermod_customCharacterScope = {
+            hidden_effect = {
+                remove_trait = physique_good_1
+                remove_trait = physique_good_2
+                remove_trait = physique_good_3
+            }
+            add_trait = physique_good_2
+        }
+    }
+    option = {
+        name = customrulermod.23.c
+        scope:customrulermod_customCharacterScope = {
+            hidden_effect = {
+                remove_trait = physique_good_1
+                remove_trait = physique_good_2
+                remove_trait = physique_good_3
+            }
+            add_trait = physique_good_3
+        }
+    }
+    option = {
+        name = customrulermod.prevpage
+    }
+    after = {
+        trigger_event = { id = customrulermod.20 }
+    }
+}
+customrulermod.30 = {
+    type = character_event
+    title = customrulermod.30.t
+    desc = customrulermod.30.desc
+    theme = realm
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.30.a
+        hidden_effect = {
+            scope:customrulermod_customCharacterScope = { #Add 3 random traits
+                customrulermod_add_random_personality_trait = {}
+                customrulermod_add_random_personality_trait = {}
+                customrulermod_add_random_personality_trait = {}
+            }
+        }
+    }
+
+    after = {
+        trigger_event = { id = customrulermod.30 }
+    }
+}
+
+customrulermod.40 = {
+    type = character_event
+    title = customrulermod.40.t
+    desc = customrulermod.40.desc
+    theme = realm
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.40.a
+        scope:customrulermod_customCharacterScope = {
+            add_diplomacy_skill = 1
+        }
+        trigger_event = { id = customrulermod.40 }
+    }
+    option = {
+        name = customrulermod.40.b
+        scope:customrulermod_customCharacterScope = {
+            add_stewardship_skill = 1
+        }
+        trigger_event = { id = customrulermod.40 }
+    }
+    option = {
+        name = customrulermod.40.c
+        scope:customrulermod_customCharacterScope = {
+            add_martial_skill = 1
+        }
+        trigger_event = { id = customrulermod.40 }
+    }
+    option = {
+        name = customrulermod.40.d
+        scope:customrulermod_customCharacterScope = {
+            add_learning_skill = 1
+        }
+        trigger_event = { id = customrulermod.40 }
+    }
+    option = {
+        name = customrulermod.40.e
+        scope:customrulermod_customCharacterScope = {
+            add_intrigue_skill = 1
+        }
+        trigger_event = { id = customrulermod.40 }
+    }
+    option = {
+        name = customrulermod.40.f
+        scope:customrulermod_customCharacterScope = {
+            add_diplomacy_skill = 5
+            add_stewardship_skill = 5
+            add_martial_skill = 5
+            add_learning_skill = 5
+            add_intrigue_skill = 5
+        }
+        trigger_event = { id = customrulermod.40 }
+    }
+    option = {
+        name = customrulermod.40.g
+        scope:customrulermod_customCharacterScope = {
+            add_diplomacy_skill = -100
+            add_stewardship_skill = -100
+            add_martial_skill = -100
+            add_learning_skill = -100
+            add_intrigue_skill = -100
+        }
+        trigger_event = { id = customrulermod.40 }
+    }
+    option = {
+        name = customrulermod.nextpage
+        trigger_event = { id = customrulermod.50 }
+    }
+}
+
+customrulermod.50 = {
+    type = character_event
+    title = customrulermod.50.t
+    desc = customrulermod.50.desc
+    theme = realm
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    widgets = {
+        widget = {
+            gui = "event_window_widget_name_child"
+            container = "dynamic_birth_name"
+            controller = name_character
+            setup_scope = { scope:customrulermod_customCharacterScope = { save_scope_as = name_character_target } }
+        }
+    }
+
+    option = {
+        name = customrulermod.50.a
+        trigger_event = { id = customrulermod.60 }
+    }
+}
+
+customrulermod.60 = {
+    type = character_event
+    title = customrulermod.60.t
+    desc = customrulermod.60.desc
+    theme = realm
+    left_portrait = {
+        character = scope:customrulermod_customCharacterScope
+        animation = idle
+    }
+
+    option = {
+        name = customrulermod.60.a
+        every_held_title = {
+            create_title_and_vassal_change = change
+            scope:change = {
+                set_title_and_vassal_change_type = returned
+            }
+            change_title_holder = {
+                holder = scope:customrulermod_customCharacterScope
+                change = scope:change
+            }
+            resolve_title_and_vassal_change = scope:change
+        }
+        set_player_character = scope:customrulermod_customCharacterScope
+    }
+    option = {
+        name = customrulermod.60.b
+        scope:customrulermod_customCharacterScope = {
+            death = { death_reason = death_disappearance }
+        }
+        trigger_event = { id = customrulermod.1 }
+    }
+    option = {
+        name = customrulermod.60.c
+        scope:customrulermod_customCharacterScope = {
+            death = { death_reason = death_disappearance }
+        }
+        remove_global_variable = customrulermod_GLOBAL_customRulerStarted
+    }
+}

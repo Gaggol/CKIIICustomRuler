@@ -1,0 +1,298 @@
+﻿customrulermod_add_random_personality_trait = {
+	random_list = {
+        100 = {
+            add_trait = lustful
+            modifier = {
+                factor = 0
+                has_trait = chaste
+            }
+        }
+        100 = {
+            add_trait = chaste
+            modifier = {
+                factor = 0
+                has_trait = lustful
+            }
+        }
+        100 = {
+            add_trait = gluttonous
+            modifier = {
+                factor = 0
+                has_trait = temperate
+            }
+        }
+        100 = {
+            add_trait = temperate
+            modifier = {
+                factor = 0
+                has_trait = gluttonous
+            }
+        }
+        100 = {
+            add_trait = greedy
+            modifier = {
+                factor = 0
+                has_trait = generous
+            }
+        }
+        100 = {
+            add_trait = generous
+            modifier = {
+                factor = 0
+                has_trait = greedy
+            }
+        }
+        100 = {
+            add_trait = lazy
+            modifier = {
+                factor = 0
+                has_trait = diligent
+            }
+        }
+        100 = {
+            add_trait = diligent
+            modifier = {
+                factor = 0
+                has_trait = lazy
+            }
+        }
+        100 = {
+            add_trait = wrathful
+            modifier = {
+                factor = 0
+                has_trait = calm
+            }
+        }
+        100 = {
+            add_trait = calm
+            modifier = {
+                factor = 0
+                has_trait = wrathful
+            }
+        }
+        100 = {
+            add_trait = patient
+            modifier = {
+                factor = 0
+                has_trait = impatient
+            }
+        }
+        100 = {
+            add_trait = impatient
+            modifier = {
+                factor = 0
+                has_trait = patient
+            }
+        }
+        100 = {
+            add_trait = arrogant
+            modifier = {
+                factor = 0
+                has_trait = humble
+            }
+        }
+        100 = {
+            add_trait = humble
+            modifier = {
+                factor = 0
+                has_trait = arrogant
+            }
+        }
+        100 = {
+            add_trait = deceitful
+            modifier = {
+                factor = 0
+                has_trait = honest
+            }
+        }
+        100 = {
+            add_trait = honest
+            modifier = {
+                factor = 0
+                has_trait = deceitful
+            }
+        }
+        100 = {
+            add_trait = craven
+            modifier = {
+                factor = 0
+                has_trait = brave
+            }
+        }
+        100 = {
+            add_trait = brave
+            modifier = {
+                factor = 0
+                has_trait = craven
+            }
+        }
+        100 = {
+            add_trait = shy
+            modifier = {
+                factor = 0
+                has_trait = gregarious
+            }
+        }
+        100 = {
+            add_trait = gregarious
+            modifier = {
+                factor = 0
+                has_trait = shy
+            }
+        }
+        100 = {
+            add_trait = ambitious
+            modifier = {
+                factor = 0
+                has_trait = content
+            }
+        }
+        100 = {
+            add_trait = content
+            modifier = {
+                factor = 0
+                has_trait = ambitious
+            }
+        }
+        100 = {
+            add_trait = arbitrary
+            modifier = {
+                factor = 0
+                has_trait = just
+            }
+        }
+        100 = {
+            add_trait = just
+            modifier = {
+                factor = 0
+                has_trait = arbitrary
+            }
+        }
+        100 = {
+            add_trait = cynical
+            modifier = {
+                factor = 0
+                has_trait = zealous
+            }
+        }
+        100 = {
+            add_trait = zealous
+            modifier = {
+                factor = 0
+                has_trait = cynical
+            }
+        }
+        100 = {
+            add_trait = paranoid
+            modifier = {
+                factor = 0
+                has_trait = trusting
+            }
+        }
+        100 = {
+            add_trait = trusting
+            modifier = {
+                factor = 0
+                has_trait = paranoid
+            }
+        }
+        100 = {
+            add_trait = compassionate
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = callous
+                    has_trait = sadistic
+                }
+            }
+        }
+        100 = {
+            add_trait = callous
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = compassionate
+                    has_trait = sadistic
+                }
+            }
+        }
+        100 = {
+            add_trait = sadistic
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = compassionate
+                    has_trait = callous
+                }
+            }
+        }
+        100 = {
+            add_trait = stubborn
+            modifier = {
+                factor = 0
+                has_trait = fickle
+            }
+        }
+        100 = {
+            add_trait = fickle
+            modifier = {
+                factor = 0
+                has_trait = stubborn
+            }
+        }
+        100 = {
+            add_trait = vengeful
+            modifier = {
+                factor = 0
+                has_trait = forgiving
+            }
+        }
+        100 = {
+            add_trait = forgiving
+            modifier = {
+                factor = 0
+                has_trait = vengeful
+            }
+        }
+    }
+}
+
+#modifier = {
+#   factor = 0
+#   has_trait = patient
+#}
+
+customrulermod_remove_education_traits = {
+    remove_trait = education_diplomacy_1
+    remove_trait = education_diplomacy_2
+    remove_trait = education_diplomacy_3
+    remove_trait = education_diplomacy_4
+    remove_trait = education_stewardship_1
+    remove_trait = education_stewardship_2
+    remove_trait = education_stewardship_3
+    remove_trait = education_stewardship_4
+    remove_trait = education_martial_1
+    remove_trait = education_martial_2
+    remove_trait = education_martial_3
+    remove_trait = education_martial_4
+    remove_trait = education_learning_1
+    remove_trait = education_learning_2
+    remove_trait = education_learning_3
+    remove_trait = education_learning_4
+    remove_trait = education_intrigue_1
+    remove_trait = education_intrigue_2
+    remove_trait = education_intrigue_3
+    remove_trait = education_intrigue_4
+}
+
+customrulermod_remove_good_genetic_traits = {
+    remove_trait = beauty_good_1
+    remove_trait = beauty_good_2
+    remove_trait = beauty_good_3
+    remove_trait = intellect_good_1
+    remove_trait = intellect_good_2
+    remove_trait = intellect_good_3
+    remove_trait = physique_good_1
+    remove_trait = physique_good_2
+    remove_trait = physique_good_3
+}
